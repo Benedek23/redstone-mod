@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "signal_readout",
+  "version": "${version}",
+  "name": "Redstone Signal Readout",
+  "description": "Look at redstone wire, a comparator, or a container to see its 0-15 signal in the action bar. Comparator/container readout works in singleplayer (reads the integrated server); wire power works everywhere.",
+  "authors": ["you"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["dev.signalreadout.SignalReadoutClient"]
+  },
+  "mixins": [
+    { "config": "signal_readout.client.mixins.json", "environment": "client" }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21"
+  }
+}
